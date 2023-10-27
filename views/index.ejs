@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task App</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous que le fichier CSS est dans le même répertoire ou ajustez le chemin selon votre structure de dossiers. -->
+</head>
+
+<body>
+
+	<div class="container">
+	    <h1>Tasks</h1>
+
+	    <form action="/add" method="post" class="add-task-form">
+		<input type="text" name="description" placeholder="New task..." class="add-task-input">
+		<button type="submit" class="add-task-button">Add</button>
+	    </form>
+
+	   <ul class="task-list">
+	    <% tasks.forEach(task => { %>
+		<li class="task-item">
+		    <%= task.description %>
+	    		 <form action="/delete/<%= task.id %>" method="post" class="delete-task-form" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche?');">
+		        	<button type="submit" class="delete-task">🗑️</button>
+		        </form>
+		</li>
+	     <% }); %>
+	   </ul>
+	</div>
+
+</body>
+
+</html>
+
+

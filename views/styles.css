@@ -1,0 +1,107 @@
+/* styles.css */
+
+/* Réinitialisation générale */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Styles pour le formulaire d'ajout */
+.add-task-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.add-task-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.add-task-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s;
+}
+
+.add-task-button:hover {
+    background-color: #2980b9;
+}
+
+/* Styles pour la liste de tâches */
+.task-list {
+    list-style-type: none;
+}
+
+.task-item {
+    background-color: #ecf0f1;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-left: 5px solid #3498db;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.task-item:hover {
+    background-color: #e0e4e7;
+}
+
+.task-item {
+
+    display: flex; /* Ajouté pour rendre les éléments en ligne */
+    justify-content: space-between; /* Espacement entre la tâche et le bouton de suppression */
+    align-items: center; /* Centrage vertical */
+}
+
+.delete-task-form { /* Style du formulaire de suppression */
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.delete-task { /* Bouton de suppression */
+
+    background: transparent; /* Arrière-plan transparent */
+    border: none; /* Pas de bordure */
+    padding: 0; /* Pas de rembourrage */
+    margin: 0; /* Pas de marge */
+    font-size: 1.2rem; /* Ajustez la taille si nécessaire */
+    cursor: pointer; /* Icône de la main au survol */
+}
+
+.delete-task:hover {
+    color: #e74c3c; /* Changez la couleur au survol, si vous le souhaitez */
+}
+
+
